@@ -140,7 +140,7 @@ try:
         #upload file
         #HOODIE has different selectors so if statement is necessary and handled first
         if s['type'].upper() == "HOODIE":
-            browser.find_element_by_id("data-draft-tshirt-assets-front-image-asset-cas-hoodie-art-image-file-upload-AjaxInput").send_keys(os.getcwd()+"\\"+s['file'])
+            browser.find_element_by_id("data-draft-tshirt-assets-front-image-asset-cas-hoodie-art-image-file-upload-AjaxInput").send_keys(os.getcwd()+"/"+s['file'])
 
             try:
                 print("waiting for processing message to appear")
@@ -166,7 +166,7 @@ try:
         #upload file (still)
         #Handle the rest of merch types after hoodie
         else:
-            browser.find_element_by_id("data-draft-tshirt-assets-front-image-asset-cas-shirt-art-image-file-upload-AjaxInput").send_keys(os.getcwd()+"\\"+s['file'])
+            browser.find_element_by_id("data-draft-tshirt-assets-front-image-asset-cas-shirt-art-image-file-upload-AjaxInput").send_keys(os.getcwd()+"/"+s['file'])
 
             try:
                 print("waiting for processing message to appear")
